@@ -1,8 +1,8 @@
-// import functions and grab DOM elements
+import { viewLocalStorage, BAG, addToLocalStorage, existInLocalStorage, getPokemonById } from "./localstorage/utils.js";
 
-// initialize state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+viewLocalStorage(BAG);
+addToLocalStorage('5cef3501ef6005a77cd4fd1a');
+
+
+
