@@ -26,7 +26,6 @@ export function searchPokemon(data, id){
 
 export function addToBag(id){
 
-
     let current_bag = pokeBag(); //arr of obj
 
     let pokemon = searchPokemon(current_bag, id); //obj
@@ -34,6 +33,7 @@ export function addToBag(id){
     if (pokemon){
 
         pokemon.caught += 1;
+        //console.log("caught");
     }
     else { 
         const newPokemon = { pokemon_name:poke_from_dex.pokemon, id:id, caught:1 };
