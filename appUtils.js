@@ -1,4 +1,4 @@
-import { pokemondata } from './pokemon data/pokemondata.js';
+
 
 export function renderPokemonToElements(ele_A, ele_B, pair){
 
@@ -9,29 +9,25 @@ export function renderPokemonToElements(ele_A, ele_B, pair){
     let pokemon_name_one = document.createElement('span');
     let pokemon_name_two = document.createElement('span');
 
+    pokemon_image_one.src = pair[0]['url_image'];
+    pokemon_image_one.style.height = '150px';
+    pokemon_image_one.style.width = '150px';
+
+    pokemon_name_one.textContent = pair[0]['pokemon'];
+    pokemon_name_two.textContent = pair[1]['pokemon'];
+
+    pokemon_image_two.src = pair[1]['url_image'];
+    pokemon_image_two.style.height = '150px';
+    pokemon_image_two.style.width = '150px';
+
     ele_A.appendChild(pokemon_image_one);
     ele_B.appendChild(pokemon_image_two);
     ele_B.appendChild(pokemon_name_two);
     ele_A.appendChild(pokemon_name_one);
 
-    console.log('in here');
+    //console.log('in here');
 
 }
-
-export function updatePokemonImages(ele1, ele2, pair){
-
-    ele1.src = pair[0]['url_image'];
-    ele1.style.height = '150px';
-    ele1.style.width = '150px';
-    ele1.textContent = pair[0]['pokemon'];
-   
-    ele2.textContent = pair[1]['pokemon'];
-    ele2.src = pair[1]['url_image'];
-    ele2.style.height = '150px';
-    ele2.style.width = '150px';
-
-}
-
 
 export function randomNum(arr){
 
