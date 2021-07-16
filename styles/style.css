@@ -6,13 +6,14 @@ header{
     background-color: rgb(255, 247, 131);
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 #bag-logo{
 
     height: 50px;
     width: 50px;
-    background-color: green;
+    
 }
 
 .main-section{
@@ -20,3 +21,76 @@ header{
     flex-direction: column;
     justify-content: center;
 }
+
+#pokemon-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 70%;
+    background-color: white;
+    border-radius: 40px;
+   
+
+}
+
+#last-caught-container{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 50px;
+width: 150px;
+background-color: white;
+border-radius: 10px;
+margin-left: 20px;
+
+}
+
+#last-caught-messsage{
+
+    font-weight: bold;
+}
+
+
+input[type="radio"]:not(:checked) + img:hover{
+
+
+    opacity: 50%;
+}
+input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + img {
+    border: 5px solid rgb(255, 202, 56);
+    border-radius: 50%;
+  }
+  
+  #button-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+  #last-caught-pokemon-name{
+  display: flex;
+  flex-direction: column;
+
+  }
+  #view-pokemon-btn{
+border-radius: 50%;
+height: 50px;
+width: 50px;
+
+  }
+
+ main{
+      background-image: url('../assets/mountain.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+  }
