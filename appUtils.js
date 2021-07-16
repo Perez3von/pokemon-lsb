@@ -45,9 +45,9 @@ export function renderPokemonToElements(ele_A, ele_B, ele_c, pair){
     pokemon_image_three.style.height = '150px';
     pokemon_image_three.style.width = '150px';
 
-    pokemon_name_one.textContent = pair[0]['pokemon'];
-    pokemon_name_two.textContent = pair[1]['pokemon'];
-    pokemon_name_three.textContent = pair[2]['pokemon'];
+    pokemon_name_one.textContent = pair[0]['pokemon'].toUpperCase();
+    pokemon_name_two.textContent = pair[1]['pokemon'].toUpperCase();
+    pokemon_name_three.textContent = pair[2]['pokemon'].toUpperCase();
     
     ele_A.appendChild(pokemon_input_one);
     ele_A.appendChild(pokemon_image_one);

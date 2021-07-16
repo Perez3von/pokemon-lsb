@@ -9,13 +9,13 @@ export function getHistory(){
 
 }
 
-export function getAllHistory(){
+// export function getAllHistory(){
 
-    let stringData = localStorage.getItem(ALL_HISTORY) || '[]';
-    const data = JSON.parse(stringData);
-    return data;
+//     let stringData = localStorage.getItem(ALL_HISTORY) || '[]';
+//     const data = JSON.parse(stringData);
+//     return data;
 
-}
+// }
 
 export function addToHistory(a){
 
@@ -43,21 +43,71 @@ export function addToHistory(a){
     if (history.length === 2){
         history[0] = history[1];
         history[1] = newHistory;
+        
     }
     else {
     
         history.push(newHistory);
     }
-  
+    
     localStorage.setItem(HISTORY, JSON.stringify(history)); 
 
 }
+// export function addtoAllHistory(id){
+
+//     let hist = getAllHistory();
+//     let curr = getHistory();
+//     let poke = searchHistory(curr[0], id);
+//     let obj = searchHistory(hist, id);
+
+//     if (obj){
+//         obj.seen += 1;
+//     }
+//     else{
+
+//         let newObj = {pokemon:poke['pokemon_name'], id:id, seen:0};
+//         hist.push(newObj);
+    
+//     }
+
+//     localStorage.setItem(ALL_HISTORY, JSON.stringify(hist));
+
+// }
 
 
-export function encounters(a){
+
+export function searchHistory(history, id){
+
+    let hist = history;
+
+    for (let i = 0; i < hist.length;i++){
 
 
+        if (id === hist[i]){
 
-
-
+            return hist[i];
+        }
+    }
+    
 }
+
+
+
+
+// export function encounterUpdate(){
+
+//     let hist = getAllHistory();
+//     let curr = getHistory();
+//     for (let i = 0; i < hist.length; i++){
+
+//         for (let j = 0; j < curr[0].length; j++){
+
+//             if (hist[i].id === curr[0][j].id){
+
+//                 hist[i].seen += 1;
+//             }
+//         }
+
+//     }
+  
+// }
