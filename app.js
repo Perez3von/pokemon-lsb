@@ -36,11 +36,11 @@ if (history.length === 2){
        
     }
     else {
-        console.log(history);
+       // console.log(history);
         addToHistory(pair);
         
         //encounterUpdate([pair[0]['species_id'], pair[1]['species_id'], pair[2]['species_id']]);
-        console.log(history);
+        //console.log(history);
         last_seen_text.textContent = 'Last Pokemon Shown';
         //last_seen.textContent = `${history[1][0].pokemon_name}  ${history[1][1].pokemon_name}  ${history[1][2].pokemon_name}`;
         renderPokemonToElements(pokemon_one, pokemon_two, pokemon_three, pair);
